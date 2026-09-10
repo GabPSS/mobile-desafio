@@ -27,5 +27,9 @@ class ListaFilmesActivity : AppCompatActivity(R.layout.activity_lista_filmes) {
         rvLista.adapter = FilmeAdapter(FilmeDao.buscar())
         rvLista.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
+        fabVolta.setOnClickListener {
+            rvLista.adapter = FilmeAdapter(FilmeDao.buscar())
+            rvLista.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        }
     }
 }
