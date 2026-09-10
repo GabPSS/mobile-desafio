@@ -13,5 +13,9 @@ class FilmeDao {
         fun buscar(): List<Filme> {
             return listaFilmes
         }
+
+        fun remover(filme: Filme) {
+            listaFilmes.remove(filme)
+        }
     }
 }
